@@ -32,7 +32,7 @@
 1010 poke 646,1
 1020 print tab(12)"s n a k e  6 4"
 1030 print
-1040 print "w a s d to move"
+1040 print "w a s d (or q z s d for azerty keyboards) to move"
 1050 print "eat * to grow"
 1060 print "don't hit walls or yourself"
 1070 print
@@ -65,9 +65,9 @@
 4020 for i=1 to l:if sx(i)=fx and sy(i)=fy then 4000
 4030 r=fy:c=fx:cl=2:t$="*":gosub 9000
 4040 return
-7000 if a$="w" then if dy<>1 then dx=0:dy=-1
+7000 if a$="w" or a$="z" then if dy<>1 then dx=0:dy=-1
 7010 if a$="s" then if dy<>-1 then dx=0:dy=1
-7020 if a$="a" then if dx<>1 then dx=-1:dy=0
+7020 if a$="a" or a$="q" then if dx<>1 then dx=-1:dy=0
 7030 if a$="d" then if dx<>-1 then dx=1:dy=0
 7040 return
 8000 r=23:c=6:cl=10:t$="game over - press r to restart or q to quit":gosub 9000
